@@ -264,4 +264,9 @@ npm -v
 ![image](image/Screenshot%202023-02-23%20at%209.45.30%20pm.png?raw=true)
 
 ![image](image/Screenshot%202023-02-23%20at%209.54.13%20pm.png?raw=true)
-2-
+2- Update the Jenkinsfile with condition-deployment when branch is master
+![image](image/Screenshot%202023-02-23%20at%2010.53.19%20pm.png?raw=true)
+
+![image](image/Screenshot%202023-02-23%20at%2010.53.05%20pm.png?raw=true)
+
+![image](image/Screenshot%202023-02-23%20at%2010.53.45%20pm.png?raw=true)
