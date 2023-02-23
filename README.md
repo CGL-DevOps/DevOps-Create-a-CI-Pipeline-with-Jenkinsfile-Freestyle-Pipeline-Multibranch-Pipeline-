@@ -223,4 +223,14 @@ npm -v
 ### Part 5: Create a Jenkins freestyle job
 
 1- Create a Freestyle jenkins job
-![image](image/Screenshot%202023-02-23%20at%207.25.12%20pm.png?src=true)
+![image](image/Screenshot%202023-02-23%20at%207.25.12%20pm.png?raw=true)
+
+![image](image/Screenshot%202023-02-23%20at%208.00.01%20pm.png?raw=true)
+
+![image](image/Screenshot%202023-02-23%20at%207.59.20%20pm.png?raw=true)
+
+2- Check out a Git repo and build
+#Connect Jenkins with a github repository with Jenkins credentials
+![image](image/Screenshot%202023-02-23%20at%208.21.36%20pm.png?raw=true)
+
+![image](image/Screenshot%202023-02-23%20at%208.23.47%20pm.png?raw=true)
