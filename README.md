@@ -220,7 +220,7 @@ npm -v
 4- Create Jenkins Credentials as Global Scope with Github Username and Password
 ![image](image/Screenshot%202023-02-23%20at%206.58.58%20pm.png?raw=true)
 
-### Part 5: Create a Jenkins freestyle job
+### Part 5: Create a Jenkins freestyle job and connect with git repo
 
 1- Create a Freestyle jenkins job
 ![image](image/Screenshot%202023-02-23%20at%207.25.12%20pm.png?raw=true)
@@ -234,3 +234,20 @@ npm -v
 ![image](image/Screenshot%202023-02-23%20at%208.21.36%20pm.png?raw=true)
 
 ![image](image/Screenshot%202023-02-23%20at%208.23.47%20pm.png?raw=true)
+
+![image](image/Screenshot%202023-02-23%20at%208.25.21%20pm.png?raw=true)
+
+### Part 6: Create a Jenkins pipeline and connect with git repo
+
+1-Create a pipeline in Jenkins
+
+![image](image/Screenshot%202023-02-23%20at%208.39.12%20pm.png?raw=true)
+
+2-Create a docker credentials for jenkins
+![image](image/Screenshot%202023-02-23%20at%208.40.24%20pm.png?raw=true)
+
+3-Create Jenkinsfile and external script.groovy
+
+![image](image/Screenshot%202023-02-23%20at%208.47.50%20pm.png?raw=true)
+
+![image](image/Screenshot%202023-02-23%20at%208.47.39%20pm.png?raw=true)
