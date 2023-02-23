@@ -251,3 +251,9 @@ npm -v
 ![image](image/Screenshot%202023-02-23%20at%208.47.50%20pm.png?raw=true)
 
 ![image](image/Screenshot%202023-02-23%20at%208.47.39%20pm.png?raw=true)
+
+4- Build on Jenkins
+
+![image](image/Screenshot%202023-02-23%20at%209.09.44%20pm.png?raw=true)
+
+![image](image/Screenshot%202023-02-23%20at%209.10.03%20pm.png?raw=true)
