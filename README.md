@@ -1,8 +1,10 @@
-### Install-Jenkins-on-DigitalOcean
+### Create a CI Pipeline with Jenkinsfile (Freestyle, Pipeline, Multibranch Pipeline)
+
+CI Pipeline for a Java Maven application to build and push to the repository
 
 ### Technologies used:
 
-Jenkins, Docker, DigitalOcean, Linux
+Jenkins, Docker, Linux, Git, Java, Maven
 
 ### Project Description:
 
@@ -12,7 +14,21 @@ Jenkins, Docker, DigitalOcean, Linux
 
 3- Initialize Jenkins.
 
+4- Install Build Tools (Maven, Node) in Jenkins.
+
+5- Make Docker available on Jenkins server.
+
+6- Create Jenkins credentials for a git repository.
+
+7- Create different Jenkins job types (Freestyle, Pipeline, Multibranch pipeline) for the Java Maven project with Jenkinsfile to:
+a. Connect to the application’s git repository
+b. Build Jar
+c. Build Docker Image
+d. Push to private DockerHub repository
+
 ### Installation instructions:
+
+### Part 1: Create Droplet server, install Docker and run Jenkins as a container
 
 ###### Step 1: Create a Droplet server on DigitalOcean.
 
@@ -95,3 +111,116 @@ cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
 ![image](image/Screenshot%202023-02-23%20at%206.06.10%20pm.png?raw=true)
+
+### Part 2: Bind mount Docker into Jenkins container
+
+#Stop the current running Jenkins container
+
+```
+docker stop 54e0af036b0c
+```
+
+```
+docker rm 54e0af036b0c
+```
+
+#Re-run Jenkins container and bind mount Docker to Jenkins container
+
+```
+docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -d --name jenkins jenkins/jenkins:lts
+```
+
+#enter into jenkins container via jenkins root user and install docker
+
+```
+docker exec -it -u 0 105713d34a44 bash
+```
+
+#Install docker inside Jenkins server
+
+```
+dockerinstall && chmod 777 dockerinstall
+```
+
+```
+bash dockerinstall
+```
+
+#change the /var/run/docker.sock privilege to read and write for all users
+
+```
+sudo chmod 666 /var/run/docker.sock
+```
+
+```
+exit
+```
+
+```
+docker exec -it 105713d34a44 bash
+```
+
+### Part 3: Install Maven and node in Jenkins
+
+###### Step 1: Install and configure Maven in within Manage Plugin and Global Tool Configuration in Jenkins UI
+
+![image](image/Screenshot%202023-02-23%20at%206.36.35%20pm.png?raw=true)
+
+###### Step 2: Install and configure Node by command line interface
+
+#Install Node directly inside Jenkins container
+
+```
+docker exec -it -u 0 540ec53fe543 bash
+```
+
+#Check with Linux distribution version container is running
+
+```
+cat /etc/issue
+```
+
+![image](image/Screenshot%202023-02-23%20at%206.41.03%20pm.png?raw=true)
+
+#Install Node
+
+```
+apt update
+```
+
+```
+apt install curl
+```
+
+```
+cd ~
+```
+
+```
+curl -sL https://deb.nodesource.com/setup_18.x -o nodesource_setup.sh
+```
+
+```
+bash nodesource_setup.sh
+apt install nodejs
+node -v
+npm -v
+```
+
+![image](image/Screenshot%202023-02-23%20at%206.52.29%20pm.png?raw=true)
+
+### Part 4: Create Jenkins Credentials for a git repository
+
+1- Click Manage Plugins
+
+2- Click Manage Credentials
+
+3- Click Add Credentials
+
+4- Create Jenkins Credentials as Global Scope with Github Username and Password
+![image](image/Screenshot%202023-02-23%20at%206.58.58%20pm.png?raw=true)
+
+### Part 5: Create a Jenkins freestyle job
+
+1- Create a Freestyle jenkins job
+![image](image/Screenshot%202023-02-23%20at%207.25.12%20pm.png?src=true)
