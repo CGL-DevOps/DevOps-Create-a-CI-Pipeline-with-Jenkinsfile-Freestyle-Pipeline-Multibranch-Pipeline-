@@ -258,6 +258,9 @@ npm -v
 
 ![image](image/Screenshot%202023-02-23%20at%209.10.03%20pm.png?raw=true)
 
+5- New image in Docker private repository
+![image](image/Screenshot%202023-02-23%20at%2011.06.14%20pm.png?raw=true)
+
 ### Part 7: Create a multi-pipeline and connect with git repo
 
 1- Create a multi-pipeline
@@ -270,3 +273,5 @@ npm -v
 ![image](image/Screenshot%202023-02-23%20at%2010.53.05%20pm.png?raw=true)
 
 ![image](image/Screenshot%202023-02-23%20at%2010.53.45%20pm.png?raw=true)
+3- New image in docker private repository
+![image](image/Screenshot%202023-02-23%20at%2011.02.44%20pm.png?raw=true)
