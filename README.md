@@ -257,3 +257,11 @@ npm -v
 ![image](image/Screenshot%202023-02-23%20at%209.09.44%20pm.png?raw=true)
 
 ![image](image/Screenshot%202023-02-23%20at%209.10.03%20pm.png?raw=true)
+
+### Part 7: Create a multi-pipeline and connect with git repo
+
+1- Create a multi-pipeline
+![image](image/Screenshot%202023-02-23%20at%209.45.30%20pm.png?raw=true)
+
+![image](image/Screenshot%202023-02-23%20at%209.54.13%20pm.png?raw=true)
+2-

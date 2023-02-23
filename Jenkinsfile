@@ -30,6 +30,11 @@ pipeline {
             }
         }
         stage("deploy") {
+            when {
+                expression {
+                    gv.masterBranch()
+                }
+            }
             steps {
                 script {
                     gv.deployApp()

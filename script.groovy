@@ -16,4 +16,8 @@ def deployApp() {
     echo 'deploying the application...'
 } 
 
+def masterBranch(){
+    BRANCH_NAME == "master"
+}
+
 return this
